@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onmouseover, onmouseout</title>
+<style type="text/css">
+	a{
+		color: white;
+		text-decoration: none; /*밑줄지우기*/
+	}
+	td{
+		width: 100px;
+		margin-top: 10px;
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+	function changeBgColor(cell, newColor){
+		cell.bgColor = newColor;
+	}
+</script>
+</head>
+<body>
+	<table> <!-- 이벤트가 발생한 객체(태그) : this --> 
+			<!-- 마우스오버시 색상변경, 마우스아웃시 원래 색상으로 변경(=롤오버효과) -->
+		<tr>  
+			<td bgcolor="#FF8888" 
+				onmouseover="changeBgColor(this,'#FF0000');" 
+				onmouseout="changeBgColor(this,'#FF8888');"><a href="#">company</a></td>
+		</tr>
+		<tr>
+			<td bgcolor="#FF8888"
+				onmouseover="changeBgColor(this,'#FF0000');" 
+				onmouseout="changeBgColor(this,'#FF8888');"><a href="#">info</a></td>
+		</tr>
+		<tr>
+			<td bgcolor="#FF8888"
+				onmouseover="changeBgColor(this,'#FF0000');" 
+				onmouseout="changeBgColor(this,'#FF8888');"><a href="#">service</a></td>
+		</tr>
+	</table>
+</body>
+</html>

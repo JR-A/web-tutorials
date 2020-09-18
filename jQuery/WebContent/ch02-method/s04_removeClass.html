@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>removeClass</title>
+<style type="text/css">
+	.item{color: red;}
+	.select{background: yellow;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//문서 객체의 클래스 속성을 제거하는 역할
+		$('h1').removeClass('select');
+	});
+</script>
+</head>
+<body>
+	<h1 class="item">Header - 0</h1>
+	<h1 class="item select">Header - 1</h1>
+	<h1 class="item">Header - 2</h1>
+</body>
+</html>

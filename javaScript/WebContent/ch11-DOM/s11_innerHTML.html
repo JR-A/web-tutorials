@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>innerHTML</title>
+<script type="text/javascript">
+
+//ch10-nestedObject-s04_Date2.html과 비교
+
+	window.onload=function(){
+		var clock = document.getElementById('clock');
+		
+		//1초마다 함수를 실행
+		setInterval(function(){
+			//Date 객체 생성
+			var now = new Date();
+			clock.innerHTML = now.toLocaleTimeString();
+		}, 1000);
+	};
+</script>
+</head>
+<body>
+	<h1 id="clock"></h1>
+</body>
+</html>

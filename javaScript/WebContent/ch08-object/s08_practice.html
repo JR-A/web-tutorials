@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+	/*
+		[문제] 객체명 : score
+			  속성 : 국어(korean), 영어(english), 수학(math)
+			  메소드 : 총점(getSum), 평균(getAvg), 출력용메서드(toString)
+		[출력예시] 국어 : 90
+				 영어 : 88
+				 수학 : 91
+				 총점 : 269
+				 평균 : 89.666666666667
+		*/
+	
+	var score = {
+		korean: 90,
+		english: 88,
+		math: 91,
+		
+		getSum: function(){
+			return this.korean + this.english + this.math;
+		},
+		getAvg: function(){
+			return this.getSum()/3;
+		},
+		toString: function(){
+			var msg = '';
+			
+			msg += '국어 : ' + this.korean + '<br>';
+			msg += '영어 : ' + this.english + '<br>';
+			msg += '수학 : ' + this.math + '<br>';
+			msg += '총점 : ' + this.getSum() + '<br>';
+			msg += '평균 : ' + this.getAvg() + '<br>';
+			
+			return msg;
+		}
+	};
+		
+	document.write(score);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

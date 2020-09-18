@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window - open, close</title>
+<script type="text/javascript">
+	/*
+		window.open(url, 새창이름, 옵션)
+		옵션
+		width : 새 윈도우의 너비
+		height : 새 윈도우의 높이
+		location : 주소 입력창 유무
+		menubar : 메뉴의 유무
+		resizable : 화면 크기 조절 가능 여부
+		status : 상태 표시줄의 유무
+		toolbar : 툴바 유무
+		scrollbars : 스크롤바유무
+		
+		window.close() : 창 닫기
+	*/
+	
+	var win;
+		
+	//새 창을 열어주는 함수
+	function winOpen(){	  //url					    새창이름    옵션
+		win = window.open('https://www.naver.com','child','toolbar=no, location=no, status=no, menubar=no, resizable=no, scrollbars=no, width=400, height=300');
+	}//location(주소창), resizable(크기조절) 모두 no했지만 브라우저가 명령 따르지 않는다. why?사용자 편의성과 사용성침해 방지. 주소정보를 사용자에게 투명하게 공개하도록 함.
+	 //각 브라우저의 보안규칙 따름
+			
+	//열려있는 창을 닫는 함수
+	function winClose(){
+		win.close();	//열려있는 창에 대한 정보를 win변수에 담았으므로 해당 창 닫기 위해 win.close()해줌
+	}
+	
+</script>
+</head>
+<body>
+
+<input type="button" value="창 열기" onclick="winOpen();"><br>
+<input type="button" value="창 닫기" onclick="winClose();">
+
+</body>
+</html>

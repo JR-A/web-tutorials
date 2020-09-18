@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체의 속성과 메서드 사용</title>
+<script type="text/javascript">
+	
+	//전역변수
+	var name = '장영실';
+	
+	//객체 생성
+	//var person = {};	//빈 객체 생성 후 속성과 메소드를 동적으로 추가 가능함
+	var person = {
+			//속성 지정
+			name: '홍길동',
+			//메서드 지정		 - 함수 : 단독, 메서드 : 객체내의 함수
+			eat: function(food){
+				//지역변수
+				var name = '강호동';
+				//name을 지역변수 or 전역변수로 인식.메서드에 선언한 지역변수를 찾고 없을 경우 객체 밖에 선언된 변수 찾는다. 객체의 식별자 name이 X 
+				document.write(name + '이 ' + food + '을/를 먹습니다.<br>');
+				
+				//객체의 식별자 name임을 나타내기 위해 this. 명시
+				document.write(this.name + '이 ' + food + '을/를 먹습니다.');
+				
+				//this : 메서드 내에서 자기자신이 가지고 있는 속성을 출력하고 싶을 때는 객체 내부에서 객체를 참조할 때 사용
+			}
+	};
+		
+	//메서드 호출
+	person.eat('시리얼');		//이 시리얼을/를 먹습니다. -객체의 식별자 name이 아닌 전역변수(지역변수) name으로 인식
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

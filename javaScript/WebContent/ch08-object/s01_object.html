@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 생성</title>
+<script type="text/javascript">
+	//객체 생성
+	var product = {
+			//속성 (key(프로퍼티):value)   key값을 한글로 하는 것은 권장하지x 배우는 단계이므로 친근감 위해 한글로 써 본 것이다.
+			제품명 : '소나타',
+			제품번호 : 'A1001',
+			원산지 : '대한민국',
+			가격 : 1000,
+			수리지원 : true
+	};
+	
+	//객체 속성 호출
+	document.write(product.제품명 + '<br>');
+	document.write(product.제품번호 + '<br>');
+	
+	document.write(product['원산지']);		//문자열로 접근
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

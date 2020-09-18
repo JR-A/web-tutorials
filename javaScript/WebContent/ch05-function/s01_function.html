@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수</title>
+<script type="text/javascript">
+	//선언적 함수
+	function check(){
+		document.write('호출하면 동작함<br>');
+	}
+	//함수 호출
+	check();
+	
+	//매개변수가 있는 함수
+	//매개변수 앞에 var를 명시하면 오류!! 매개변수명만 명시
+	function check2(msg){
+		document.write(msg + '을 좋아합니다.<br>');
+	}
+	
+	check2('가을');
+	
+	//반환하는 값이 있는 경우
+	function check3(num){
+		return num*num;
+	}
+	//함수호출
+	var number = check3(10);
+	document.write('number = ' + number);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

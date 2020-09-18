@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math</title>
+<script type="text/javascript">
+
+	//올림
+	document.write('Math.ceil(5.3) : ' + Math.ceil(5.3) + '<br>');
+	//버림
+	document.write('Math.floor(5.9) : ' + Math.floor(5.9) + '<br>');
+	//반올림
+	document.write('Math.round(5.6) : ' + Math.round(5.6) + '<br>');
+	//최댓값
+	document.write('Math.max(15, 30) : ' + Math.max(15, 30) + '<br>');
+	//최솟값
+	document.write('Math.min(15, 30) : ' + Math.min(15, 30) + '<br>');
+	//절대값
+	document.write('Math.abs(-5) : ' + Math.abs(-5) + '<br>');
+	//난수(0<=  <1)
+	document.write('Math.random() : ' + Math.random() + '<br>');
+	
+	document.write('==============<br>');
+	
+	var newNum = 254.437;
+	document.write('소수점 셋째자리에서 반올림 : ' + newNum.toFixed(2) + '<br>');
+	document.write('소수점 셋째자리에서 반올림 : ' + (Math.round(newNum * 100))/100 + '<br>');
+	
+	/*
+	Math.ceil(5.3) : 6
+	Math.floor(5.9) : 5
+	Math.round(5.6) : 6
+	Math.max(15, 30) : 30
+	Math.min(15, 30) : 15
+	Math.abs(-5) : 5
+	Math.random() : 0.6634671198781514
+	==============
+	소수점 셋째자리에서 반올림 : 254.44
+	소수점 셋째자리에서 반올림 : 254.44
+	*/
+</script>
+</head>
+<body>
+
+</body>
+</html>

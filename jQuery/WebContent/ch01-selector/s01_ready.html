@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery 연결</title>
+<!-- jQuery 연결 -->
+<!-- 방법 1 : js 파일 다운로드 후 경로 연결(권장) -->
+<!-- <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script> -->
+ 
+<!-- 방법 2 : CDN[Contents Delivery Network]방식 : URL을 통해서 js 파일 연결 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- 두 방법 중 하나 사용 - ctrl + shift + / 하면 주석 -->
+
+<script type="text/javascript">
+	//문서가 준비 완료되면 매개변수로 전달된 함수를 실행 (window.onload=function(){};과 비슷)
+	//$(docuemtn).ready는 여러 개 명시 가능. 자바스크립트의 window.onload는 딱 한번만 가능
+	$(document).ready(function(){
+		alert('First READY');
+	});
+	$(document).ready(function(){
+		alert('Second READY');
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

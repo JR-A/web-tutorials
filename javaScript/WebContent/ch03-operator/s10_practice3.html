@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+/*
+	길동의 하루 지출 내역은 교통비 3,000원, 식비 6,000원, 음료비 3,000원입니다.
+	삼항 연산자를 사용하여 하루 적정 지출 비용인 1만원을 초과했을 경우 "000원 초과"라고 출력되고,
+	아니라면 "돈 관리를 잘 했어요!!"라고 출력되도록 코드를 작성하시오.
+	입력은 prompt
+*/
+	/*
+	var traffic = Number(prompt('교통비',''));
+	var food = Number(prompt('식비',''));
+	var beverage = Number(prompt('음료비',''));
+	var total = traffic + food + beverage;
+	total > 10000 ? document.write(total-10000 + '원 초과') : document.write('돈 관리를 잘했어요!');
+	*/
+	
+	var traffic = prompt('교통비','');
+	var food = prompt('식비','');
+	var beverage = prompt('음료비','');
+	
+	//총합 구하기 string -> number
+	var total = Number(traffic) + Number(food) + Number(beverage);
+	var result = total>10000 ? total-10000 + '원 초과' : '돈 관리를 잘했어요!!';
+	
+	document.write(result);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

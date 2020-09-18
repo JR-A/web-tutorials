@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수</title>
+
+<script type="text/javascript">
+	//변수 선언
+	var num;		//variable 자료형을 명시하지 x
+	
+	//변수에 값을 할당
+	num = 123;
+	
+	//출력
+	document.write('num = ' + num);
+	document.write('<br>');
+	
+	//변수를 선언하지 않고 출력
+	//document.write(num2);	//컴파일오류가 나지x 그러나 없는 변수를 호출하므로 실행시 에러난다
+	document.write('~~~~~~~~~~~<br>');	//18line이 오류가 있으면 19line이 출력되지 않는다
+	
+	//변수 선언 후 값을 할당하지 않고 출력
+	var num3;
+	
+	document.write('num3 = ' + num3);//런타임오류 나지x undefined로 출력됨.연산불가 - 자바와의 차이점
+	document.write('<br>');
+	
+	//두 개 이상의 변수를 한 번에 선언
+	var a, b;
+	
+	a = 10;	//대입하는 순간 자료형이 결정됨
+	b = 5;
+	
+	document.write('a + b = ' + (a + b));
+	document.write('<br>');
+	
+	//변수 선언과 초기화를 한 번에 수행
+	var c = 10, d = 3.5;
+	
+	document.write('c + d = ' + (c + d)); //형변환 하지 않아도 실수 데이터 나옴
+	document.write('<br>');
+	
+	//변수명으로 한글 사용 가능
+	var 번호 = 3;
+	
+	document.write('번호 = ' + 번호);
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

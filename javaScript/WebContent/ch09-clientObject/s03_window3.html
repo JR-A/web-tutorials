@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window - setTimeout, setInterval </title>
+<script type="text/javascript">
+	/*
+		setTimeout(function, millisecond) : 일정시간 후에 함수를 한 번 실행
+		setInterval(function, millisecond) : 일정시간마다 함수를 반복해서 실행
+	*/
+	
+	//윈도우가 로드되면 onload에 할당된 함수를 호출  (window의 속성 onload)
+	window.onload = function(){
+		//alert('경고창을 닫고 3초 후 "안녕하세요"를 표시');
+		//3초 후에 함수를 실행
+		//window.setTimeout(function(){document.write('안녕하세요');}, 3000);
+		
+		alert('경고창을 닫고 3초 후 이 페이지는 종료됩니다.');
+		//3초 후에 윈도우 닫기
+		window.setTimeout(function(){window.close();},3000);
+	};
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>id와 태그명을 사용해서 문서 객체 탐색</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var allSpans = document.getElementsByTagName('span');
+		
+		var output = '';
+		for(var i=0; i<allSpans.length; i++){
+			output += allSpans[i].innerHTML + '\n';			//응용프로그램이라 <br>대신 \n써야함
+		}
+		alert(output);
+		
+		var foo = document.getElementById('foo'); 		//첫번째 p태그
+		var fooSpans = foo.getElementsByTagName('span');	//첫번쨰 p태그의 모든 span태그
+		
+		var output2 = '';
+		for(var i=0; i<fooSpans.length; i++){
+			output2 += fooSpans[i].innerHTML + '\n';
+		}
+		alert(output2);
+		
+	};
+	
+</script>
+</head>
+<body>
+	<p id="foo">
+		<span>a</span>
+		<span>b</span>
+		<span>c</span>
+	</p>
+	<p id="bar">
+		<span>x</span>
+		<span>y</span>
+	</p>
+</body>
+</html>

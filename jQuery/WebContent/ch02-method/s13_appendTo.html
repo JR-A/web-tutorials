@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 생성</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	/*
+		메서드명					설명
+		$(A).appendTo(B)		A를 B의 기존 자식의 뒤에 추가 (B:부모  A:자식)
+		$(A).prependTo(B)		A를 B의 기존 자식의 앞에 추가
+		$(A).insertAfter(B)		A를 B의 뒤에 추가 (A-B: 형제)
+		$(A).insertBefore(B)	A를 B의 앞에 추가
+	*/
+	$(document).ready(function(){
+		//$('<h1>Hello World</h1>').appendTo('div');  //'div'의 자식으로 '<h1>Hello World</h1>'를 (맨뒤에) 추가.
+		//$('<h1>Hello World</h1>').prependTo('div');	 //'div'의 자식으로 '<h1>Hello World</h1>'를 (맨앞에) 추가.
+		//$('<h1>Hello World</h1>').insertAfter('div');	//'div'의 형제로 '<h1>Hello World</h1>'를 ('div'뒤에) 추가
+		$('<h1>Hello World</h1>').insertBefore('div');	//'div'의 형제로 '<h1>Hello World</h1>'를 ('div'앞에) 추가
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1>안녕하세요!</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>toString</title>
+<script type="text/javascript">
+	var student = {};
+	
+	//객체를 생성하면 자동적으로 Object를 상속받게됨. Object 메서드인 toString()을 사용할 수 있음
+	document.write(student.toString() + '<br>');	//[object Object]
+	
+	//객체명을 호출하면 자동적으로 객체의 toString() 메서드가 동작
+	document.write(student + '<br><br>'); //[object Object] . toString()한것과 동일하게 출력됨
+	
+	//객체의 속성 추가
+	student.이름 = '홍길동';
+	student.취미 = '악기연주';
+	student.특기 = '프로그래밍';
+	student.장래희망 = '프로그래머';
+	
+	//for in 반복문을 이용한 객체의 속성 출력
+	var output = '';
+	for(var key in student){
+		output += key + ':' + student[key] + '<br>';
+	}
+	document.write(output);
+	document.write('-----------<br>');
+	
+	//객체의 메서드 추가. object의 toString 오버라이딩
+	student.toString = function(){
+		var msg = '';
+		for(var key in this){
+			if(key != 'toString'){	//toString메소드 정보는 출력하지 않음
+				msg += key + ' : ' + this[key] + '<br>';
+			}
+		}
+		return msg;	//생략하면 undefined로 출력됨!
+	};
+	
+	document.write(student + '<br>');
+	document.write(student.toString() + '<br>');	//객체의 메서드 호출!
+	document.write(student.toString + '<br>');		//객체의 메서드 정보 출력. 메소드명만 명시하면 메서드의 정보만 출력된다
+	document.write(student['toString'] + '<br>');	//객체의 메서드의 정보 출력! 메서드 '호출'이 아님. 호출하려면 student['toString']() 로 소괄호 붙여주기
+	document.write('-------------------<br>');
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

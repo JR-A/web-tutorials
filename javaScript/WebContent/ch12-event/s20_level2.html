@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표준 이벤트 모델</title>
+<script type="text/javascript">
+	/*
+		표준 이벤트 모델
+		addEventListener(eventType, eventHandler, useCapture) : 이벤트 연결
+		removeEventListener(eventType, eventHandler) : 이벤트 제거
+		
+		DOM level2의 표준 이벤트 모델로도 이벤트 추가할 수 있다.
+	*/
+	//윈도우가 로드될 때			//이벤트종류  이벤트핸들러
+	window.addEventListener('load', function(){
+		//h1태그 읽기
+		var myHeader = document.getElementById('myHeader');
+		
+		//이벤트 연결
+		myHeader.addEventListener('click', function(){
+			alert('이벤트 발생!!');
+		}, false);
+		
+	}, false); //false -> 이벤트 버블링 사용
+			  //true -> 이벤트 캡처링 사용
+</script>
+</head>
+<body>
+	<h1 id="myHeader">Click</h1>
+</body>
+</html>

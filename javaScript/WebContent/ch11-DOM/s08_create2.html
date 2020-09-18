@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체의 속성 지정</title>
+<script type="text/javascript">
+	window.onload=function(){
+		//요소 노드 생성
+		var img = document.createElement('img'); //img태그 생성
+		img.src = 'Penguins.jpg'; //img의 src속성에 파일명 저장. 같은 폴더에 이미지파일 있으므로 경로 필요없음
+		img.width = 500;	//이미지 크기 조정
+		img.height = 350;
+		
+		//노드 연결
+		document.body.appendChild(img);	//body에 img추가
+		
+		//코드가 너무 길어진다 -> innerHTML 속성 사용하기
+	};
+</script>
+</head>
+<body>
+	
+</body>
+</html>

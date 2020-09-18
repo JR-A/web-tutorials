@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>name 속성을 이용해서 문서 객체 탐색 </title>
+<script type="text/javascript">
+	window.onload = function(){
+		//getElementsByTagNames가 x -> h1, span 등의 태그 이름으로 태그 가져옴
+		//태그의 속성인 name으로 태그 가져옴
+		var prev = document.getElementsByName('prev');
+		var next = document.getElementsByName('next');
+		
+		prev[0].innerHTML = '이전';
+		next[0].innerHTML = '다음';
+		
+		//getElement's' 임을 주의
+		var country = document.getElementsByName('country');
+		country[0].checked = true;
+		
+		var comment = document.getElementsByName('comment');
+		comment[0].value = '오징어땅콩';
+		
+	};
+</script>
+</head>
+<body>
+	<button name="prev">prev</button>
+	<br>
+	<button name="next">next</button>
+	<br>
+	<input type="checkbox" name="country" value="한국">한국
+	<input type="checkbox" name="country" value="미국">미국
+	<input type="checkbox" name="country" value="중국">중국
+	<br>
+	<input type="text" name="comment">
+</body>
+</html>

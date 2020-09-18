@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+	/*
+		[문제]국어, 영어, 수학을 입력받아서 총점, 평균을 구하여 출력하기
+		출력은 alert()를 이용. 출력은 국어, 영어, 수학, 총점, 평균
+	*/
+	/*
+	function study(){
+		var korean = document.getElementById('korean').value;
+		var english = document.getElementById('english').value;
+		var math = document.getElementById('math').value;
+		
+		var sum = Number(korean)+Number(english)+Number(math);
+		var avg = sum/3;
+		
+		var msg = '';
+		msg += '국어 : ' +korean+ '\n영어 : ' + english + '\n수학 : ' + math + '\n총점 : ' + sum + '\n평균 : ' + avg;
+		alert(msg);
+		
+		// 조건 체크를 하자!
+	}
+	*/
+	
+	/*선생님*/
+	function study(){
+		var korean = document.getElementById('korean');
+		//공백체크
+		if(korean.value == ''){
+			alert('국어 성적을 입력하세요.');
+			korean.focus();
+			return;
+		}
+		//문자인지 숫자인지 체크
+		if(isNaN(korean.value)){
+			alert('국어 성적은 숫자만 가능');
+			korean.value = '';
+			kroean.focus();
+			return;
+		}
+		
+		var english = document.getElementById('english');
+		if(english.value == ''){
+			alert('영어 성적을 입력하세요.');
+			english.focus();
+			return;
+		}
+		if(isNaN(english.value)){
+			alert('영어 성적은 숫자만 가능');
+			english.value = '';
+			english.focus();
+			return;
+		}
+		
+		var math = document.getElementById('math');
+		if(math.value == ''){
+			alert('수학 성적을 입력하세요.');
+			math.focus();
+			return;
+		}
+		if(isNaN(math.value)){
+			alert('수학 성적은 숫자만 가능');
+			math.value = '';
+			math.focus();
+			return;
+		}
+		
+		//총점 구하기
+		var sum = Number(korean.value) + Number(english.value) + Number(math.value);
+		//평균 구하기
+		var avg = sum/3;
+		
+		var msg = '';
+		msg += '국어 : ' + korean.value + '\n';
+		msg += '영어 : ' + english.value + '\n';
+		msg += '수학 : ' + math.value + '\n';
+		msg += '총점 : ' + sum + '\n';
+		msg += '평균 : ' + avg.toFixed(2) ; //소수 셋째자리에서 반올림
+		
+		//알림창 띄우기
+		alert(msg);
+	}
+	
+</script>
+</head>
+<body>
+	<form>
+		국어 : <input type="text" name="korean" id="korean"><br>
+		영어 : <input type="text" name="english" id="english"><br>
+		수학 : <input type="text" name="math" id="math"><br>
+		<input type="button" value="확인" onclick="study();">
+	</form>
+</body>
+</html>

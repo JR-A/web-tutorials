@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 내부의 데이터 제거</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	/*
+		remove() : 특정 문서 객체를 제거 (해당 객체포함 그 내부의 모든 객체 삭제)
+		empty() : 특정 문서 객체의 후손을 모두 제거 (해당 객체는 그대로. 내부의 모든 객체 제거(비우기))
+	*/
+	$(function(){		//$(document).ready(function(){}); 축약형
+		$('p').remove();	//p태그 포함 그 내부의 모든 객체 제거
+		
+		$('div').empty();	//div '내부'의 모든(후손) 객체 제거함
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1>Header-0</h1>
+		<h1>Header-1</h1>
+	</div>
+	<p>
+		<span>Content-0</span>
+		<span>Content-1</span>
+		<span>Content-2</span>
+	</p>
+	
+</body>
+</html>

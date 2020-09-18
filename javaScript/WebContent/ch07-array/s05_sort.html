@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열의 요소 정렬</title>
+<script type="text/javascript">
+	var array = ['가', '하', '아', '나'];
+	
+	//배열의 요소 정렬
+	array.sort();
+	
+	//배열의 요소 목록 출력
+	document.write(array + '<br>'); //가,나,아,하
+	
+	//"현재 정렬"의 반대로 정렬. 반드시 기본정렬 후 reverse해야 사전의 역순으로 정렬됨.
+	array.reverse();
+	document.write(array + '<br>');	//하,아,나,가
+
+	
+	document.write('====================<br>');
+	
+	var array2 = [52, 273, 103, 32];
+	
+	//sort함수 사용 - 숫자의 경우
+	array2.sort();
+	document.write(array2 + '<br>');	//103,273,32,52
+										//숫자를 문자열로 생각하여 첫글자 기준으로 정렬되었음.
+	
+	//작은 수가 앞으로 오게 정렬
+	//sort(compare function)
+	/*
+	Optional. A function that defines an alternative sort order. The function should return a negative, zero, or positive value, depending on the arguments, like:
+	function(a, b){return a-b}
+	When the sort() method compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.
+	
+	Example:
+	When comparing 40 and 100, the sort() method calls the compare function(40,100).
+	The function calculates 40-100, and returns -60 (a negative value).
+	The sort function will sort 40 as a value lower than 100.
+	*/
+	array2.sort(function(left, right){	//기존의 요소가 left, right로 전달됨
+		return left - right;
+	});
+	document.write(array2 + '<br>'); //32,52,103,273 
+	
+	
+	//큰 수가 앞으로 오게 정렬
+	array2.sort(function(left, right){
+		return right - left;
+	});
+	document.write(array2 + '<br>'); //273,103,52,32 
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

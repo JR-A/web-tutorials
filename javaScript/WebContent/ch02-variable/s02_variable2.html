@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수 사용시 주의사항</title>
+
+<script type="text/javascript">
+	var food = '칼국수'; //변수 선언 및 초기화
+	document.write(food + '<br>');
+	
+	food = '라면'; //데이터 변경
+	document.write(food + '<br>--------------<br>');
+	
+	//변수명이 같게 선언되어도 오류 발생하지 않음
+	var food = '냉면';//변수 선언 및 초기화.java에서는 동일명칭 변수 재선언 불가능,js는 컴파일에러x,런타임에러x
+	document.write(food); //혼동 야기할 수 있다
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

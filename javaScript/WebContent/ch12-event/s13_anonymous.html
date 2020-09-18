@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 연결</title>
+<script type="text/javascript">
+		window.onload=function(){
+			//div
+			var header = document.getElementById('header');
+			
+			//이벤트 연결
+			header.onclick = function(){
+				alert('CLICK');
+			};
+			
+		};
+</script>
+</head>
+<body>
+	<div id="header">CLICK</div>
+</body>
+</html>

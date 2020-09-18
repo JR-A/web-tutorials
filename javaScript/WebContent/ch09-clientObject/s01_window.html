@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window - alert, prompt, confirm</title>
+<script type="text/javascript">
+	/*
+		브라우저 관련 객체
+		window
+		  |
+		location  history	frame  document  screen  navigator
+									   |
+				  anchor applet area form image layer link plugin title
+				  					   |
+		  button checkbox fileupload hidden password radio reset select submit text textarea
+		  														    |
+		  														  option
+		 window의 메서드
+		 window.alert() : 경고창
+		 window.prompt() : 입력창
+		 window.confirm() : 선택창
+		 
+		 (window.)은 생략가능
+	*/
+	
+	window.alert('경고창');
+	
+	var season = window.prompt('좋아하는 계절은?', '');
+	document.write('좋아하는 계절은 ' + season + '이다<br>');
+	
+	var choice = window.confirm('야근을 하겠습니까?');
+	//확인 true, 취소 false 반환
+	//x 아이콘을 클릭하면 false로 처리
+	if(choice){
+		document.write('야근 확정!');
+	} else{
+		document.write('야근 취소!');	
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

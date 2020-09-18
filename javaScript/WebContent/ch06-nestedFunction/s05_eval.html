@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>eval()</title>
+<script type="text/javascript">
+	var willEval = '';
+	willEval += 'var number = 10;';
+	willEval += 'alert(number);';
+	
+	//eval() : 문자열을 전달하면 실행할 수 있는 코드로 변환! 문자열->코드
+	eval(willEval); 
+	alert(number);	//전역변수라서 메모리에 number가 존재하므로 가져다 쓸 수 있다.
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

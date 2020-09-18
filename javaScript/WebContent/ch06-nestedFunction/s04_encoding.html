@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>encoding 관련 함수</title>
+<script type="text/javascript">
+	/*
+		인코딩 : 문자 코드를 기준으로 문자를 코드로 변환하는 것
+		디코딩 : 코드를 문자로 변환하는 것
+	*/
+	/*
+		함수 이름 						 	   설명
+		escape(url)					적절한 정도로 인코딩함
+		unescape(url)				적정한 정도로 디코딩함
+		
+		encodeURI(url)				최소한의 문자만 인코딩함
+		decodeURI(url)				최소한의 문자만 디코딩함
+		
+		encodeURIComponent(url)		대부분의 문자를 인코딩함
+		decodeURIComponent(url)		대부분의 문자를 디코딩함
+	*/
+	
+	//인코딩할 URL
+	var url = 'http://www.naver.com?test=한글입니다.'; //인코딩하지않고 한글이 들어간 문자를 넘기면 글자가 깨져버린다
+	
+	
+	//데이터 출력을 위한 변수
+	var output = '';
+	//적절한 정도로 인코딩
+	output += '*escape()<br>';
+	output += escape(url) + '<br><br>';//http%3A//www.naver.com%3Ftest%3D%uD55C%uAE00%uC785%uB2C8%uB2E4.
+									  // :,?의 특수문자, 한글 인코딩
+	//최소한의 문자만 인코딩
+	output += '*encodeURI()<br>';
+	output += encodeURI(url) + '<br><br>';//http://www.naver.com?test=%ED%95%9C%EA%B8%80%EC%9E%85%EB%8B%88%EB%8B%A4.
+										  //한글 인코딩
+	//대무문의 문자를 인코딩					  
+	output += '*encodeURIComponent()<br>';//http%3A%2F%2Fwww.naver.com%3Ftest%3D%ED%95%9C%EA%B8%80%EC%9E%85%EB%8B%88%EB%8B%A4.
+	output += encodeURIComponent(url);	  // .제외한 모든 특수문자, 한글 전부 인코딩
+	
+	//출력
+	document.write(output);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

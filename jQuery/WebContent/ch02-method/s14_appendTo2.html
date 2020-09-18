@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 생성</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//메모리상에 태그객체 생성됨 $('<img>')
+		$('<img>').attr({src: '../images/Penguins.jpg', 
+						width: 400,
+						height: 250}).appendTo('body');  //body태그에 img태그를 동적으로 추가
+			//여러 속성을 한번에 제어하기 위해 객체 형태로 서술(key:value)
+		//attr()메서드는 속성을 제어 후 해당 객체를 반환함 -> .으로 접근 후 메서드 호출가능(appendTo())
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

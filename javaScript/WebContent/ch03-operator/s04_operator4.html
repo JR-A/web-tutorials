@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비교연산자</title>
+<script type="text/javascript">
+/*
+ 	연산자				설명
+ 	===			양 변의 값뿐만 아니라 자료형도 같은지 비교 
+ 	!==			양 변의 값뿐만 아니라 자료형도 다른지 비교
+ 	
+*/
+
+//a와 b의 자료형이 다름을 유의. a:number, b:string
+//자동으로 형변환하여 비교함
+
+	var a = 20, b = '20', result;
+	result = a == b;	//true
+	document.write('a == b : ' + result + '<br>');
+	
+	result = a > b;		//false
+	document.write('a > b : ' + result + '<br>');
+	
+	result = a >= b;	//true (> or =)
+	document.write('a >= b : ' + result + '<br>');
+	
+	result = a != b;	//false
+	document.write('a != b : ' + result + '<br>');
+	
+	//자바 스크립트만의 특징적인 연산자
+	//값뿐만 아니라 자료형 일치 여부도 체크(둘 다 같아야 true)
+	result = a === b;	//false
+	document.write('a === b : ' + result + '<br>');
+	
+	//값뿐만 아니라 자료형도 다른지 여부를 비교(둘 다 달라야 true)
+	result = a !== b;	//true
+	document.write('a !== b : ' + result + '<br>');
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

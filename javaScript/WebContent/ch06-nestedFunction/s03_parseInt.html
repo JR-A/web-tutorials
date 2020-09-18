@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>parseInt(), parseFloat() 함수</title>
+<script type="text/javascript">
+	var num = '1234';
+	var won = '1000원';
+	var won2 = '원1000';
+	
+	var num2 = '24.56';
+	var dollar = '24.56$';
+	var dollar2 = '$24.56';
+	
+	document.write(Number(num) + '<br>'); //1234. string -> number
+	document.write(Number(won) + '<br>');	//NaN.
+	document.write(parseInt(won) + '<br>');	//1000. 1000원 string->1000 number. 숫자+문자의 경우 문자를 잘라내 숫자만 추출 후 형변환!
+	document.write(parseInt(won2) + '<br>');//NaN.  문자+숫자의 경우는 추출불가함.
+	
+	document.write('===================<br>');
+	
+	document.write(Number(num2) + '<br>');	//24.56. string -> number
+	document.write(Number(dollar) + '<br>');	//NaN.
+	document.write(parseFloat(dollar) + '<br>'); //24.56. 숫자+문자의 경우 문자 잘라 숫자만 추출 후 형변환!
+	document.write(parseFloat(dollar2) + '<br>'); //NaN. 문자+숫자의 경우 추출불가
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

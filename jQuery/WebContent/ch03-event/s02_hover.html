@@ -1,0 +1,35 @@
+<!--  javaScript프로젝트/ch12-event/s04_onmouseover.html 참고 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 연결 - hover</title>
+<style type="text/css">
+	.reverse{
+		background-image: url(../images/landscape.jpg);
+		color: white;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		//이벤트 연결
+		//hover(f1, f2) - f1:마우스오버 이벤트핸들러  f2:마우스아웃 이벤트핸들러
+		$('h1').hover(function(){	
+			//마우스오버 이벤트핸들러
+			//this : 이벤트가 발생한 태그
+			$(this).addClass('reverse');	//클래스 추가하여 css스타일적용
+		}, function(){	
+			//마우스아웃 이벤트핸들러 
+			$(this).removeClass('reverse'); //클래스 삭제하여 css스타일해제
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>회사정보</h1>
+	<h1>제품정보</h1>
+	<h1>매장정보</h1>
+</body>
+</html>

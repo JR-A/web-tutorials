@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onchange</title>
+<script type="text/javascript">
+	function sub(){
+		var x = document.getElementById('word');
+		x.value = x.value.toUpperCase();	//대문자로 변경
+		
+	}
+</script>
+</head>
+<body>
+	영어단어 : <input type="text" id="word" onchange="sub();">
+	<p>입력 필드를 벗어나면 대문자로 변경됩니다.</p>
+</body>
+</html>

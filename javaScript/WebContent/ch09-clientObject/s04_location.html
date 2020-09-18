@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>location</title>
+<script type="text/javascript">
+	//**가장 자주 사용 location.href. 특정 페이지로 이동하고싶은 경우 사용
+	document.write('location.href : ' + location.href + '<br>');
+	//(tomcat 등)server쓰면 file://이 아닌 http://로 표시됨
+	//location.href : file:///E:/javaWork/workspace_jsp/javaScript/WebContent/ch09-clientObject/s04_location.html
+	
+	document.write('location.host : ' + location.host + '<br>');
+	//server사용하지 않아서 host정보 출력되지x
+	//location.host : 
+	
+	document.write('location.hostname : ' + location.hostname + '<br>');
+	//server사용하지 않아서 hostname 출력되지x
+	//location.hostname : 
+	
+	document.write('location.protocol : ' + location.protocol + '<br>');
+	//server사용하면 http: 로 나올것임. 통신규약
+	//location.protocol : file:
+	
+	document.write('location.port : ' + location.port + '<br>');
+	//server사용하지 않아서 port 출력되지x. server쓰면 80 등의 정보 출력
+	//location.port : 
+</script>
+</head>
+<body>
+
+</body>
+</html>

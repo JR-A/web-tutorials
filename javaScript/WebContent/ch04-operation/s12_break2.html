@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>break</title>
+<script type="text/javascript">
+	//다중 반복문
+	for(var i=0; i<5; i++){
+		for(var j=0; j<5; j++){
+			//break는 자신이 포함된 반복문만 빠져나감
+			if(j == 3){
+				break;	//break문은 가장 가까운 반복문 하나만 빠져나감. 다중반복 전체를 빠져나가지 않는다
+			}
+			
+			document.write('i값 : ' + i + ', j값 : ' + j + '<br>');
+		}
+	}
+	
+	document.write('=====================<br>');
+	
+	//모든 반복문 탈출하도록 label명시
+	//break label문 사용
+	
+	//break를 이용해서 빠져나가고 싶은 "반복문"에 이름을 부여
+	outer_loop:
+	for(var i=0; i<5; i++){
+		for(var j=0; j<5; j++){
+			if(j == 3){
+				//빠져나가기를 원하는 반복문의 이름 호출
+				break outer_loop;
+			}
+			document.write('i값 : ' + i + ', j값 : ' + j + '<br>');
+		}
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

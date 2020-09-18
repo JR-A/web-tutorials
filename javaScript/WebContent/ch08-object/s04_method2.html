@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체의 속성 및 메서드 활용</title>
+<script type="text/javascript">
+	//객체 생성
+	var mySon = {
+			name: '홍길동',
+			age: 7,
+			play: function(music){
+				document.write(this.name + '이 ' + music + '를 연주하다');
+			}
+	};
+	
+	//객체 호출
+	document.write(mySon.name + '<br>');
+	document.write(mySon.age + '<br>');
+	mySon.play('기타');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

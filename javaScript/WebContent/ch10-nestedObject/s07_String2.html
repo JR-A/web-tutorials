@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String</title>
+<script type="text/javascript">
+	function trans(){
+				//아래 form에서 입력한 ID를 읽어옴
+		var txt = document.form1.id.value; //document는 전체 html태그식별. 계층적으로 name통해 접근. document-form1-id의value
+		txt = txt.toUpperCase();	//입력한 소문자 ID를 대문자로 변환
+		//변환한 값을 input 태그에 표시
+		document.form1.id.value = txt;
+	}
+</script>
+</head>
+<body>
+
+	<form name = "form1">
+		ID를 소문자로 입력하세요. 대문자로 변환됩니다.<br>
+		ID : <input type="text" name="id">
+		<input type="button" value="입력" onclick="trans();">
+	</form>
+
+</body>
+</html>

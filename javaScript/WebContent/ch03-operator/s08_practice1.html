@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+/*
+ 국어, 영어, 수학 성적(0~100) 입력받아서 총점, 평균 구함
+ 출력예시
+ 국어 : 90
+ 영어 : 90
+ 수학 : 90
+ 총점 : 270
+ 평균 : 90
+ */
+ 
+ 	/*
+	var korean = Number(prompt('국어입력',''));
+	var english = Number(prompt('영어입력',''));
+	var math = Number(prompt('수학입력',''));
+	var sum = korean + english + math;
+	*/
+	var korean = prompt('국어입력','');
+	var english = prompt('영어입력','');
+	var math = prompt('수학입력','');
+	var sum = Number(korean) + Number(english) + Number(math);//강제 형변환 시키기
+	
+	var avg = sum/3;
+	
+	document.write('국어 : ' + korean + '<br>');
+	document.write('영어 : ' + english + '<br>');
+	document.write('수학 : ' + math + '<br>');
+	document.write('총점 : ' + sum + '<br>');
+	document.write('평균 : ' + avg + '<br>');
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

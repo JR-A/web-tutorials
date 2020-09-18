@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수를 매개변수로 받는 함수</title>
+<script type="text/javascript">
+
+	//함수를 10번 호출하는 함수
+	function callFunctionTenTimes(otherFunction){
+		for(var i=0;i<10;i++){
+			otherFunction();	//매개변수로 전달된 함수를 실행
+		}
+	}
+	
+	//선언적 함수
+	function justFunction(){
+		document.write('Happy Day!!<br>');
+	}
+	
+	//함수호출
+	//매개변수로 선언적함수 전달
+	callFunctionTenTimes(justFunction);		//함수정보를 매개변수로 넘김 Happy Day!!10번 실행
+	//callFunctionTenTimes(justFunction());	//함수를 매개변수로 넘기지않고 그냥 justFunction실행만 시키는것임. Happy Day!!1번실행
+	
+	document.write('======================<br>');
+	
+	//매개변수로 익명함수 전달
+	callFunctionTenTimes(function(){
+		document.write('Hello World!!<br>');
+	});
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

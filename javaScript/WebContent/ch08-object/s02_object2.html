@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>반복문을 이용해서 객체의 속성 읽기</title>
+<script type="text/javascript">
+	var product = {
+			name: 'eclipse',
+			price: '10,000원',
+			language: '한국어',
+			supportOS: 'win10',
+			subscription: true
+	};
+	
+	var output = '';
+	
+	//방법 1  - x
+	//for in 반복문
+	for(var key in product){	//변수 key에 product객체의 식별자가 문자열로 저장됨
+		output += '*' + key + ':' + product.key + '<br>';
+	}
+	document.write(output + '<br>');
+	/*
+		*name:undefined
+		*price:undefined
+		*language:undefined
+		*supportOS:undefined
+		*subscription:undefined
+	*/
+	
+	//왜 undefined일까?
+	//key의 자료형이 문자열이기 때문 . 객체의 키가 아닌 문자열 변수처럼 취급하므로 dot(.)연산자를 쓰지 못한다
+	
+	//방법 2  - o
+	output = '';
+	//for in 반복문
+	for(var key in product){	
+		output += '*' + key + ':' + product[key] + '<br>';
+	}
+	document.write(output);
+	/*
+		*name:eclipse
+		*price:10,000원
+		*language:한국어
+		*supportOS:win10
+		*subscription:true
+	*/
+	//잘 읽어옴 
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+	/*
+		[문제] 이메일을 ID로 사용하기 위해서 이메일 형식을 체크함
+			@가 있으면 '이메일 형식에 맞음'이라고 alert경고창으로 출력
+			@가 없으면 '이메일 형식에 맞지않음'이라고 alert경고창으로 출력
+			
+			pinos71@daum.net
+	*/
+	function check(){
+		var email = document.getElementById('email').value;
+		
+		if(email !=''){
+			//alert(email);
+			var index = email.indexOf('@');
+			if(index > 0 && index < email.length-1){
+				alert('이메일 형식에 맞음');
+			}
+			else{
+				alert('이메일 형식에 맞지 않음');
+			}
+		}
+	}
+	
+	/* 선생님 */
+	/*
+	function check(){
+		var email = document.getElementById('email');
+		
+		if(email.value == ''){
+			alert('이메일을 입력하세요!');
+			email.focus();
+			return;	//함수를 빠져나감
+		}
+		
+		var n = email.value.indexOf('@');
+		alert(n);
+		if(n > 0){
+			alert('이메일 형식에 맞게 입력');
+		} else{
+			alert('이메일 형식에 맞게 입력하세요!');
+			email.value = '';	//이메일란 초기화
+			email.focus();
+		}
+	}
+	*/
+	
+</script>
+</head>
+<body>
+	<form>
+		Email : <input type="text" name="email" id="email"><br>
+		<input type="button" value="입력" onclick=check();></input>
+	</form>
+</body>
+</html>

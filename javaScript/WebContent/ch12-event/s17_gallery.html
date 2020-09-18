@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gallery</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#galleryWrap{
+		width: 520px;		/* css는 px 표기해야함 */
+		margin: 0 auto;
+		text-align: center;
+	}
+	#galleryWrap img{
+		vertical-align: middle;	/* 화살표 버튼이 이미지 중간높이에 가도록 */
+	}
+	img#prev, img#next{
+		cursor: pointer; /*이미지 위에 마우스오버시 손가락모양으로 커서 변경*/
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var num = 1;
+		
+		var gallery = document.getElementById('gallery');
+		
+		//이벤트 연결
+		document.getElementById('prev').onclick=function(){
+			num--;
+			if(num < 1) num = 7;
+			gallery.src = 'img' + num + '.jpg';
+		};
+		document.getElementById('next').onclick=function(){
+			num++;
+			if(num > 7) num = 1;
+			gallery.src = 'img' + num +'.jpg';
+		};
+		
+	};
+</script>
+</head>
+<body>
+	<div id="galleryWrap">
+		<h1>이미지 넘기기</h1>
+		<p>
+			<img src="left_btn.png" alt="이전 그림" id="prev">
+			<img src="img1.jpg" alt="갤러리 그림" id="gallery">
+			<img src="right_btn.png" alt="다음 그림" id="next">
+		</p>
+	</div>
+</body>
+</html>

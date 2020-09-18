@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체에 데이터 삽입</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//객체 배열 생성
+		var content = [
+			{name: '홍길동', city: '서울'},
+			{name: '박문수', city: '부산'},
+			{name: '장영실', city: '대구'}
+		];
+		
+		//jquery는 for나 for in 반복문 대신 each()메서드 사용
+			  	//배열, 배열로부터 전달받은 index, 객체
+		$.each(content, function(index, item){
+			//index : 배열의 인덱스
+			//item : 배열에 저장된 객체
+			var output = '';
+			output += '<div>';
+			output += '    <h1>' + item.name + '</h1>';
+			output += '    <h2>' + item.city + '</h2>';
+			output += '</div>';
+			
+			   //div
+			$('#output').append(output); //output을 #output(div태그)의 자식으로 추가
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

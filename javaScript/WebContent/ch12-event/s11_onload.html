@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onload</title>
+<script type="text/javascript">
+	
+	/*
+	 <input value="값"/> 여기엔 value를 사용
+	 <div>값</div> 여기엔 innerHtml을 사용 
+	 
+	 form 이하의 input, textarea, select 등  -> value (데이터 입력하는 경우)
+	 태그의 내용부분 span,div,h1,p 등... -> innerHTML (<></> 태그 사이의 내용 제어시)
+	*/
+	//이벤트가 발생했을 때 호출되는 함수를 연결
+	window.onload=function(){
+		alert('문서가 로드되었습니다.');
+		//body의 배경색 지정
+		document.body.style.backgroundColor = 'yellow';
+		//div
+		var notice = document.getElementById('notice');
+		notice.innerHTML = '날씨 맑음!'; 
+		//notice.value = '날씨 맑음맑음!';
+	};
+</script>
+</head>
+<body>
+	<div id="notice"></div>
+</body>
+</html>

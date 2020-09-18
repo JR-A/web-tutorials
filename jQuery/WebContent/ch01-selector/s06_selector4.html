@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택자 - 자식 선택자</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//자식 선택자 ( > ) - 직계자식
+		//div가 아닌 태그에는 스타일 적용되지 않음
+		//body 태그의 자식(직계 자식)으로 범위 한정
+		//$('body > div').css('border', '3px solid red');
+		
+		//후손 선택자 (  )
+		//body 이하 div 선택(후손 중 div도 선택)
+		$('body div').css('border', '3px solid blue');
+	});
+</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>Apple</li>
+			<li>Melon</li>
+			<li>Tomato</li>
+			<li>Banana</li>
+			<li>Orange</li>
+		</ul>
+		<div>가을 여행</div>
+	</div>
+	<p>
+		<span>하하</span>
+	</p>
+</body>
+</html>

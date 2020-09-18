@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 생성</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	/*
+		메서드명					설명 (B가 목적어가 되는것임 - 'B를' append.)
+		$(A).append(B)			B를 A의 기존 자식의 뒤에 추가 (A:부모  B:자식)
+		$(A).prepend(B)			B를 A의 기존 자식의 앞에 추가
+		$(A).after(B)			B를 A의 뒤에 추가 (A-B: 형제)
+		$(A).before(B)			B를 A의 앞에 추가
+	*/
+	
+	/* 
+	참고) s13_appendTo.html
+		메서드명					설명 (전치사 To -> 'B에' A를 추가)
+		$(A).appendTo(B)		A를 B의 기존 자식의 뒤에 추가 (B:부모  A:자식)
+		$(A).prependTo(B)		A를 B의 기존 자식의 앞에 추가
+		$(A).insertAfter(B)		A를 B의 뒤에 추가 (A-B: 형제)
+		$(A).insertBefore(B)	A를 B의 앞에 추가
+	*/
+	$(function(){
+		//$('div').append('<h1>Hello jQuery!!</h1>');
+		//$('div').prepend('<h1>Hello jQuery!!</h1>');
+		//$('div').after('<h1>Hello jQuery!!</h1>');
+		$('div').before('<h1>Hello jQuery!!</h1>');
+		
+	});
+	
+</script>
+</head>
+<body>
+	<div>
+		<h1>오늘은 화요일</h1>
+	</div>
+</body>
+</html>

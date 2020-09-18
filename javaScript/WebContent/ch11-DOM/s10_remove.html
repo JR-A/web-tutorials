@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 제거</title>
+<script type="text/javascript">
+	window.onload = function(){
+		//id 통해서 문서 객체 탐색
+		var willRemove = document.getElementById('will_remove');
+		
+		//3초 후에 함수 호출
+		setTimeout(function(){
+			//문서 객체 제거(부모 노드에서 자식을 제거)
+			//document.body.removeChild(willRemove);
+			
+			//문서 객체의 하위 요소를 모두 제거(어떤 부모노드의 자식들을 모두 제거)
+			document.body.innerHTML = ''; //빈 문자열을 대입해 태그 모두 지움
+			
+		},3000);
+	};
+</script>
+</head>
+<body>
+	<h1 id="will_remove">Header</h1>
+	<h1>Header2</h1>
+</body>
+</html>

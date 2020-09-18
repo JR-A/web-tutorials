@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+	/*
+		[문제] 성적을 관리하는 배열을 생성, 5과목(국어, 영어, 수학, 과학, 미술)
+		배열명은 score . 초기데이터로 임의의 값으로 직접 입력함
+		
+		출력예시 ) 총점 : 368점
+				평균 : 73.6점
+		
+	*/
+	var score = [100, 50, 50, 100, 68];
+	var sum = 0;
+	var avg = 0;
+	
+	//총점 구하기
+	for(var i in score){	//java의 확장for문과 달리 요소값이 아닌 인덱스를 반환
+		sum += score[i];
+	}
+	//평균 구하기
+	avg = sum / score.length;
+	
+	document.write('총점 : ' + sum + '점<br>');
+	document.write('평균 : ' + avg + '점<br>');
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html> 

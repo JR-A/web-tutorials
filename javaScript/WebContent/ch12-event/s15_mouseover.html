@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>큰 이미지 보기</title>
+<script type="text/javascript">
+	window.onload=function(){
+		//img 태그 호출
+		var bigImg = document.getElementById('bigImg');
+		
+		//a 태그 호출
+		var alink = document.getElementsByTagName('a');
+		
+		//반복문을 사용해서 모든 a태그에 이벤트 연결
+		for(var i=0; i<alink.length; i++){
+			//이벤트 연결
+			alink[i].onmouseover = function(){
+				bigImg.style.display = '';
+				bigImg.src = this.href;	//이벤트가 발생한 태그(a)의 href속성에 이미지 링크
+				bigImg.width = 500;
+				bigImg.height = 350;
+			};
+			//마우스 아웃되면 보이지않도록
+			alink[i].onmouseout = function(){
+				bigImg.style.display = 'none';
+			};
+			//a태그의 기본이벤트 제거
+			alink[i].onclick = function(){
+				return false;
+			};
+		}
+		
+	};
+</script>
+</head>
+<body>
+	<div>
+		<!-- 큰 이미지 링크 -->
+		<!-- a태그는 onclick등의 이벤트 연결하지않아도 href로 링크를 달면 클릭시 그 페이지로 이동함!기본이벤트가 동작됨 -->
+		<a href="Penguins.jpg"><img src="Penguins.jpg" width="83" alt="작은 펭귄 이미지"></a>
+		<a href="Koala.jpg"><img src="Koala.jpg" width="83" alt="작은 코알라 이미지"></a>
+	</div>
+	<div>
+		<img id="bigImg" style="display:none;">
+	</div>
+</body>
+</html>

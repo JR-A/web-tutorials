@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 연결 - on</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//이벤트 연결
+		//		on( 이벤트종류 , 이벤트핸들러 )
+		$('h1').on('click', function(){
+			$(this).html(function(index, html){
+				return html + '+';		//클릭할 때마다 + 표시
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>Header-0</h1>
+	<h1>Header-1</h1>
+	<h1>Header-2</h1>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date</title>
+<script type="text/javascript">
+	//script에서 html body의 태그에 접근하기위해선 onload로 script의 수행을 지연시켜주어야함. html태그 모두 인식한 후 script실행하기 위해
+	window.onload = function(){
+		//일정 시간(1초)마다 매개변수로 전달된 함수를 반복해서 실행
+		window.setInterval(function(){
+			var time = new Date();
+			var hours = time.getHours();
+			var minutes = time.getMinutes();
+			var seconds = time.getSeconds();
+			
+			//현재 시간 나타내는 문자열 만들기   예- 15:09:56
+			var clock = '';
+			clock += ((hours < 10) ? '0' : '') + hours;	//시 자릿수를 항상 두자리로 맞추기
+			clock += ((minutes < 10) ? ':0' : ':') + minutes; //분 자릿수롤 항상 두 자리로 맞추기. :도 추가
+			clock += ((seconds < 10) ? ':0' : ':') + seconds; //초 자릿수를 항상 두 자리로 맞추기. :도 추가
+			
+			document.getElementById('display').innerHTML = clock;	//id로 태그에 접근(getElementById) 후 .innerHTML 값 변경 통해 html코드를 삽입
+			
+		}, 1000);
+	};
+</script>
+</head>
+<body>
+	<span id="display"></span>
+</body>
+</html>

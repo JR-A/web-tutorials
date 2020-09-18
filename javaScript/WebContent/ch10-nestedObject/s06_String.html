@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String</title>
+<script type="text/javascript">
+	var characters = prompt('사용할 비밀번호 입력', '6글자 이상');
+	
+	alert(typeof(characters));	//typeof는 함수가 아니라 연산자. ()는 최우선연산자
+	
+	if(characters.length < 6){
+		alert('6글자 이상으로 입력하세요!');
+	} else{
+		alert('잘했어요!');
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

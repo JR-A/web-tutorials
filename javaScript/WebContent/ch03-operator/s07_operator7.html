@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건 연산자(삼항 연산자)</title>
+<script type="text/javascript">
+	var temp1 = 5, temp2 = 10;
+	var max, min;
+	
+	//두 숫자의 크기를 비교하여 max와 min 변수에 저장
+	
+	//조건식 		   ?	 참일 때 수행되는 문장 			:		거짓일 때 수행되는 문장 
+	temp1 >= temp2 ? (max = temp1, min = temp2) : (max = temp2, min = temp1);
+	//자바에서는 허용되지 않음. 그냥 값만 대입가능하다
+	
+	document.write('큰 값 = ' + max + '<br>');
+	document.write('작은 값 = ' + min + '<br>');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

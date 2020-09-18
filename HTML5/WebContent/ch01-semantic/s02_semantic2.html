@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>semantic 태그의 사용</title>
+<style type="text/css">
+	/* 여백 및 기본 폰트 세팅 */
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: Arial, "MS Trebuchet", sans-serif
+	}
+	
+	/* 페이지의 내용을 가운데에 놓음 */
+	#wrap{
+		width: 960px;
+		margin: 0 auto; /*상하0 좌우auto - 중앙정렬*/
+	}
+	
+	/* 헤더의 너비 설정 */
+	header#page_header{
+		width: 100%;
+	}
+	
+	/* 내비게이션(nav)의 리스트의 점 제거 */
+	header#page_header nav ul, footer#page_footer nav ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	/* 내비게이션(nav)을 가로 바 형태로 만들기 */
+	header#page_header nav ul li, footer#page_footer nav ul li{
+		padding: 0;
+		margin: 0 20px 0 0;		/* 상 우 하 좌 */
+		display: inline;		/* 리스트를 가로 형태로 만듦 */
+	}
+	
+	/* 문단 하단에 마진 주기 */
+	p{
+		margin: 0 0 20px 0;
+	}
+	
+	/* 가로 방향으로 표시. 내용 배치하기 */
+	section#posts{
+		float: left;
+		width: 74%;
+	}
+	section#posts aside{
+		float: right;
+		width: 35%;
+		margin-left: 5%;
+		font-size: 20px;
+		line-height: 40px;
+	}
+	section#sidebar{
+		float: left;
+		width: 25%;
+	}
+	/* footer 하단에 고정시키기(같이 오른쪽으로 딸려간것 float 해제하여 하단고정) */
+	footer#page_footer{
+		clear: both;
+		width: 100%;
+		text-align: center;
+	}
+	
+</style>
+</head>
+<body>
+	<div id="wrap">
+	
+		<!-- header : 회사의 로고, 메뉴, 검색 상자 등 -->
+		<header id="page_header">
+			<h1>Star Blog</h1>
+			<!-- nav : 메뉴, 페이지 연결 링크 -->
+			<nav>
+				<ul>
+					<li><a href="1.html">최근 글</a></li>
+					<li><a href="2.html">이전 글</a></li>
+					<li><a href="3.html">공헌자 글</a></li>
+					<li><a href="4.html">연락처</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		
+		<!-- section : 페이지의 논리적 영역(내용 부분) -->
+		<section id="posts">
+			<!-- article : 세부 내용 -->
+			<article class="post">
+				<!-- 내용의 작은 제목 -->
+				<header>
+					<h2>얼마나 많이 기록해 둬야 되겠습니까?</h2>
+					<p>Posted by Brain on 2020.09.16</p>
+				</header>
+				
+				<!-- aside : 인용구, 덧붙이고 싶은 생각, 관련 링크 -->
+				<aside>
+					<p>&quot;물건을 팔 때는 거절할 기회를 주어선 안된다.&quot;</p>   <!-- &quot; : " 쌍따옴표 -->
+				</aside>
+				
+				<p>
+				이번 서비스는 미국과 독일, 프랑스, 캐나다 등 세계 22개국에서 동시 출시됐으며, 아시아에선 한국이 유일하게 포함됐다.
+				</p>
+				<p>
+				월 이용요금 1만6천700원인 엑스박스 게임 패스 얼티밋은 SK텔레콤 대리점과 고객센터, T월드 또는 SK텔레콤 5GX 클라우드게임 전용 홈페이지에서 가입할 수 있다.
+				</p>
+				<p>
+				엑스박스 콘솔과 클라우드 게임 이용권을 월정액 형태로 이용할 수 있는 프로그램, 게임 이용권과 함께 게임 컨트롤러를 할부로 제공하는 서비스 등을 선보인다.
+				이를 위해 SK텔레콤은 5G 기반의 다양한 기술을 적용하고 마이크로소프트와 협력해 클라우드 플랫폼 '애저'의 운용을 최적화했다.
+				회사 측은 나아가 국내 게임업체와 협력해 국산 게임의 글로벌 진출을 지원한다. 우선 액션스퀘어, 써니사이드업 등 국내 게임사 2곳의 게임을 엑스박스용 게임으로 출시하기로 했다.
+				필 스펜서 마이크로소프트 엑스박스 게임 총괄부사장은 "한국과 전 세계 게이머들이 친구, 가족과 함께 더 자유롭게 게임을 즐길 수 있게 돼 기쁘다"며 
+				"한국 게임 커뮤니티에 환상적인 게임 경험을 제공할 수 있기를 기대한다"고 말했다. 유영상 SK텔레콤 MNO 사업대표는 "고품격 'SKT 5GX 클라우드 게임'으로 
+				구독형 게임 서비스를 선도할 것"이라며 "국내 유망 게임을 발굴, 지원해 클라우드 게임 생태계를 더욱 넓혀 가겠다"고 말했다.
+				</p>
+				
+				<!-- 내용에 대한 반복적인 문구 -->
+				<footer>
+					<p>
+						<a href="comments.html">25 Comments</a>
+					</p>
+				</footer>
+			</article>
+		</section>
+		
+		
+		<!-- 사이드 바 -->
+		<section id="sidebar">
+			<nav>
+				<h3>이전 글</h3>
+				<ul>
+					<li><a href="1.html">2020년 1월</a></li>
+					<li><a href="2.html">2020년 2월</a></li>
+					<li><a href="3.html">2020년 3월</a></li>
+					<li><a href="4.html">2020년 4월</a></li>
+					<li><a href="5.html">2020년 5월</a></li>
+				</ul>
+			</nav>
+		</section>
+		
+		
+		<!-- footer : 저작권이나 사이트 소유자에 대한 정보, 메뉴 등 -->
+		<footer id="page_footer">
+			<p>&copy; 2020 Star Blog</p>
+			<nav>
+				<ul>
+					<li><a href="home.html">홈페이지</a></li>
+					<li><a href="about.html">회사소개</a></li>
+					<li><a href="address.html">연락처</a></li>
+					<li><a href="board.html">게시판</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+</body>
+</html>

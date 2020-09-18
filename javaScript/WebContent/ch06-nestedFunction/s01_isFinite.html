@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>isFinite 함수</title>
+<script type="text/javascript">
+	var number1 = 10 / 0;	//자바에서는 정수를 0으로 나누면 예외발생(ArithmeticException). 자바스크립트는 예외 발생하지x
+	document.write('number1 = ' + number1 + '<br>');  //number1 = Infinity
+	
+	if(number1 == Infinity){	//무한대일경우(0으로 나누는경우)
+		document.write('무한<br>');
+	} else{
+		document.write('유한<br>');
+	}
+	
+	document.write('====================<br>');
+	
+	var number2 = -10/0;		//음수를 0으로 나누면 -Infinity
+	document.write('number2 = ' + number2 + '<br>'); //number2 = -Infinity
+	
+	document.write('====================<br>');
+	
+	//양수, 음수를 0으로 나누었는지 아닌지 모든 검증 가능.
+	
+	if(isFinite(number1)){ //0이 아닌 수로 나눈 경우
+		document.write('유한<br>');
+	} else{	//0으로 나눈 경우
+		document.write('무한<br>');
+	}
+	
+	document.write('====================<br>');
+
+	if(isFinite(number2)){	//0이 아닌수로 나눈 경우. 유한한경우
+		document.write('유한<br>');
+	} else{
+		document.write('무한<br>');
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

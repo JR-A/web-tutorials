@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 제거</title>
+<script type="text/javascript">
+	window.onload=function(){
+		//div
+		var header = document.getElementById('header');
+		//이벤트 연결
+		header.onclick = function(){
+			alert('클릭');
+			header.innerHTML = '오늘은 금요일';
+			
+			//이벤트 제거
+			header.onclick=null;
+		};
+	};
+</script>
+</head>
+<body>
+	<div id="header">클릭</div>
+</body>
+</html>

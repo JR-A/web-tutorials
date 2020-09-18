@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>history</title>
+</head>
+<body>
+
+<input type="button" value="뒤로 한 페이지" onclick="history.back();">
+<!-- 전 페이지가 없으므로 무반응.주소창에 s05_locatoin2.html로 주소 변경하여 이동시켜주고(전 페이지 생성) 다시 s06_history.html해주면 히스토리가 생기므로 전 페이지로 이동가능 -->
+
+<input type="button" value="뒤로 한 페이지" onclick="history.go(-1);">
+<!-- history.back()과 동일한 결과 -->
+
+<input type="button" value="앞으로 한 페이지" onclick="history.forward();">
+<!-- 앞 페이지 만들어주기. 현재페이지에서 s02_window2.html로 주소 변경하여 이동. 브라우저의 back버튼으로 되돌아오면 앞 페이지 생성되었음. 앞으로 한 페이지 버튼 누르면 앞페이지로 이동가능 -->
+
+<input type="button" value="앞으로 한 페이지" onclick="history.go(1);">
+<!-- history.forward()와 동일한 결과 -->
+
+</body>
+</html>

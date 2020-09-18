@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>location</title>
+</head>
+<body>
+
+<!-- 페이지 이동 -->
+<!-- location의 href속성 이용 . 새로운 페이지로 이동된다. 주소 히스토리 기록됨. -->
+<input type="button" onclick="location.href='s04_location.html'" value="이동(href)">
+<!-- location의 assign메서드 이용 . href로 이동하는것과 완전히 동일 -->
+<input type="button" onclick="location.assign('s04_location.html')" value="이동(assign)">
+<!-- location의 replace메서드 이용. 기존페이지를 새로운 페이지로 변경시킨다. 주소 히스토리 기록되지않음(back버튼으로 돌아가기할 수 없음). -->
+<input type="button" onclick="location.replace('s04_location.html')" value="이동(replace)">
+
+<!-- 새로고침 location의 reload메서드 이용  -->
+<input type="button" onclick="location.reload()" value="새로고침">
+
+
+</body>
+</html>

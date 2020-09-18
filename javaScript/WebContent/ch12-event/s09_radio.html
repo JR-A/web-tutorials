@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>radio</title>
+<script type="text/javascript">
+	function check(){
+		//div
+		var flag = document.getElementById('flag');
+		//input
+		var radios = document.getElementsByTagName('input');
+
+		if(radios[0].checked == true){
+			//첫 번째 radio버튼 선택된 경우 div 숨기기
+			flag.style.display = 'none';
+		} else{
+			//두 번째 radio버튼 선택된 경우(=첫번째가 선택되지 않은 경우) div보이기
+			flag.style.display = '';
+		}
+	}
+</script>
+</head>
+<body>
+	<form>
+		<!-- radio버튼을 같은 name으로 묶어야 단일선택됨 -->
+		<input type="radio" name="price" checked value="0" onclick=check();>무료
+		<input type="radio" name="price" value="1" onclick=check();>유료
+	</form>
+	<div id="flag" style="display:none"> <!-- 기본적으로 div숨김 -->
+		유료회원 가입비는 10,000원입니다.
+	</div>
+</body>
+</html>

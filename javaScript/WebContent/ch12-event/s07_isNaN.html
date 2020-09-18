@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>isNaN</title>
+<script type="text/javascript">
+	function checkNum(){
+		var age = document.getElementById('age');
+		
+		if(age.value==''){	//공백의 경우
+			alert('나이를 입력해 주세요!');
+			age.focus();
+			return;
+		}
+		
+		//isNaN은 빈문자열의 경우 0으로 인식 -> false
+		if(isNaN(age.value)){ //숫자가 아닐 경우
+			alert('나이는 숫자만 가능합니다.');
+			age.value = '';	//age 입력란 초기화
+			age.focus();	//age 입력란에 커서
+		} else{	//숫자일 경우
+			alert('입력한 나이는 ' + age.value);
+		}
+	}
+</script>
+</head>
+<body>
+	<form>
+		나이 : <input type="text" name="age" id="age">
+		<input type="button" value="확인" onclick="checkNum();">
+	</form>
+</body>
+</html>

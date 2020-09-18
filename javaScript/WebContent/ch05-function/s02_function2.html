@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명함수</title>
+<script type="text/javascript">
+	//익명함수
+	var play = function(){
+		document.write('운동을 좋아해요~~<br>');
+	};
+	
+	//함수호출
+	//변수에 저장하고 변수명();으로 호출 자바와 다름
+	play();
+	
+	//매개변수가 있는 익명함수 경우
+	var play2 = function(item){
+		document.write(item + "를 좋아해요<br>");
+	};
+	
+	//함수호출
+	play2('축구');
+	
+	//반환하는 데이터가 있는 경우
+	var play3 = function(x, y){
+		return x + y;
+	}
+	
+	//함수 호출
+	var result = play3(5, 8);
+	document.write('result = ' + result + '<br>');
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

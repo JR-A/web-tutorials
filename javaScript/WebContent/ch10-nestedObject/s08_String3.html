@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String</title>
+<script type="text/javascript">
+	var msg = '세상의 끝에서 세상을 노래하다';
+			 //0 1 234 5678 9
+	document.write(msg.charAt(8) + '<br>');
+	document.write(msg.indexOf('상') + '<br>');
+	document.write(msg.indexOf('노래') + '<br>');
+	document.write(msg.lastIndexOf('상') + '<br>');
+	
+	document.write(msg.substring(5) + '<br>');
+	//시작 인덱스부터 끝 인덱스 전까지
+	document.write(msg.substring(1, 5) + '<br>');
+	
+	var msg2 = '2020-09-08';
+	
+	var array = msg2.split('-');
+	document.write(array);
+	
+	/*
+	세
+	1
+	12
+	9
+	에서 세상을 노래하다
+	상의 끝
+	2020,09,08 
+	*/
+</script>
+</head>
+<body>
+
+</body>
+</html>

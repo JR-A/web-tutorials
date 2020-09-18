@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 연결 - on</title>
+<style type="text/css">
+	div{
+		margin: 5px;		/* 태그 바깥의 여백 */
+		padding: 3px;		/* 태그 내부의 여백 */
+		border-width: 3px;
+		border-style: solid;
+		border-color: black;
+		border-radius: 10px;	/* 모서리의 둥근 정도 */
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//이벤트 연결 (div 클릭하면 태그 정보 가져와 alert띄우기)
+		$('div').on('click', function(){
+			/* 
+			  참고)
+				여러 개의 태그를 선택
+				$('h1,p').css('color','orange');
+					
+				h1태그이면서 class가 item인 태그 선택
+				$('h1.item').css('background','red');
+				
+				두 개의 클래스를 모두 가진 태그 선택
+				$('h1.item.select').css('background','blue');
+			
+			*/
+			
+			//이벤트가 발생한 태그의 '하위 태그' 중 h1 태그에 접근 
+			// $('h1', this) 순서에 유의, $('h1, this')가 아님을 주의
+			var header = $('h1', this).text();	//this : div임
+			
+			//이벤트가 발생한 태그의 하위 태그 중 p 태그에 접근
+			var paragraph = $('p', this).text();
+			
+			alert(header + '\n' + paragraph);	//alert은 응용프로그램이므로 \n으로 줄바꿈
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1>Header-1</h1>
+		<p>Paragraph-1</p>
+	</div>
+	<div>
+		<h1>Header-2</h1>
+		<p>Paragraph-2</p>
+	</div>
+	<div>
+		<h1>Header-3</h1>
+		<p>Paragraph-3</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+	/*
+		*세금은 5%
+		[문제]	이름		수입		지출		잔액(getBalance,세금공제)	세금(getTax, 5%)
+				홍길동	3000	2500	수입-세금-지출				수입의 5%
+				박문수	5000	1100
+				이순신 	4000	3600
+				김유신	7000	4200
+	*/
+	
+	var finance = [];
+	finance.push({이름: '홍길동', 수입: 3000, 지출: 2500});
+	finance.push({이름: '박문수', 수입: 5000, 지출: 1100});
+	finance.push({이름: '이순신', 수입: 4000, 지출: 3600});
+	finance.push({이름: '김유신', 수입: 7000, 지출: 4200});
+	 
+	for(var i in finance){	//i는 배열의 인덱스
+		finance[i].getBalance = function(){
+			return this.수입 - this.getTax() - this.지출;
+		};
+		
+		finance[i].getTax = function(){
+			return this.수입*0.05;
+		};
+		
+		finance[i].toString = function(){
+			var msg = '';
+			msg += this.이름 + '    ' + this.수입 + '    ' + this.지출 + '    ' + this.getBalance() + '    ' + this.getTax();
+			return msg;
+		};
+	}
+	
+	//document.write('이름		수입		지출		잔액		세금<br>');
+	var output = '이름	수입		지출		잔액		세금<br>';
+	for(var i in finance){
+		//document.write(finance[i].toString()+'<br>');
+		output += finance[i].이름 + '    ' + finance[i].수입 + '    ' + finance[i].지출 + '    ' + finance[i].getBalance() + '    ' + finance[i].getTax() +'<br>';
+	}
+	document.write(output);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 생성. appendTo() 이용한 이미지 롤링</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//이미지 크기 조정
+		$('img').css('width', 250); //너비를 줄이면 종횡비에 맞추어 높이도 자동조절됨
+		
+		//간단한 이미지 rolling
+		//함수를 2초마다 실행
+		setInterval(function(){
+			//첫 번째 이미지 '$('img').fisrt()'를 body태그 마지막으로 보냄(body 기존 자식의 뒤에 추가)
+			$('img').first().appendTo('body');
+		}, 2000);
+	});
+</script>
+</head>
+<body>
+<!--
+	상대경로 표시 
+	현재 폴더 : .
+	상위 폴더 : ..
+ -->
+	<img src="../images/Desert.jpg">
+	<img src="../images/Koala.jpg">
+	<img src="../images/Jellyfish.jpg">
+	<img src="../images/Penguins.jpg">
+	<img src="../images/landscape.jpg">
+</body>
+</html>

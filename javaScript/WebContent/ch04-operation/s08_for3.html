@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단</title>
+<script type="text/javascript">
+	document.write('<table border = "1">');
+	for(var i=2; i<=9; i++){	//단
+		document.write('<tr>');	 //테이블의 행 만들기
+		for(var j=1; j<=9; j++){	//곱해지는 숫자
+			document.write('<td>');	//테이블의 셀(방) 만들기
+			document.write(i + ' * ' + j + ' = ' + i*j );
+			document.write('</td>');
+		}
+		document.write('</tr>');
+	}
+	document.write('</table>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

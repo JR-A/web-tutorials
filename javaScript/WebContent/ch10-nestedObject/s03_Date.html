@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date</title>
+<script type="text/javascript">
+	 //자바의 Calendar와 가까움, 자바의 Date와 비슷하지않음
+	 //현재 시간에 대한 Date객체 생성
+	 var now = new Date();
+	 
+	 document.write('now의 값 : ' + now + '<br>'); //now의 값 : Tue Sep 08 2020 14:39:11 GMT+0900 (대한민국 표준시) 
+	 //한글로 바꿔서 출력
+	 document.write('오늘 : ' + now.toLocaleString() + '<br>'); //오늘 : ‎2020‎년 ‎9‎월 ‎8‎일‎ ‎오후‎ ‎2‎:‎41‎:‎43
+	 document.write('오늘의 날짜 : ' + now.toLocaleDateString() + '<br>'); //오늘의 날짜 : ‎2020‎년 ‎9‎월 ‎8‎일
+	 document.write('오늘의 시간 : ' + now.toLocaleTimeString() + '<br>'); //오늘의 시간 : 오후‎ ‎2‎:‎41‎:‎43
+	 
+	 document.write('연도 : ' + now.getFullYear() + '<br>'); //연도 : 2020
+	 //월 : 0 ~ 11로 반환하므로 +1 해주어야함 
+	 document.write('월 : ' + (now.getMonth()+1) + '<br>'); //월 : 9
+	 document.write('일 : ' + now.getDate() + '<br>'); //일 : 8
+	 //요일 : 0(일) ~ 6(토) 
+	 document.write('요일 : ' + now.getDay() + '<br>'); //요일 : 2
+	 
+	 //시 : 0 ~ 23.  24시표기
+	 document.write('시 : ' + now.getHours() + '<br>'); //시 : 14
+	 document.write('분 : ' + now.getMinutes() + '<br>'); //분 : 41
+	 document.write('초 : ' + now.getSeconds() + '<br>'); // 초 : 43
+	 document.write('밀리초 : ' + now.getMilliseconds() + '<br>');
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

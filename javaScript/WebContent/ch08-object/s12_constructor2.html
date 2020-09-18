@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생성자 함수를 사용한 객체의 생성과 출력</title>
+<script type="text/javascript">
+	//생성자 함수 정의
+	function Student(name, korean, english, math, science){
+		//속성
+		this.이름 = name;
+		this.국어 = korean;
+		this.영어 = english;
+		this.수학 = math;
+		this.과학 = science;
+		
+		//메서드 지정
+		this.getSum = function(){
+			return this.국어 + this.영어 + this.수학 + this.과학;
+		};
+		this.getAverage = function(){
+			return this.getSum()/4;
+		};
+		this.toString = function(){
+			return this.이름 + ', ' + this.getSum() + ', ' + this.getAverage(); 
+		};
+	}
+	
+	//학생의 성적 정보를 저장할 배열 생성
+	var students = [];
+	students.push(new Student('홍길동',99,98,97,96));
+	students.push(new Student('박문수',98,98,97,96));
+	students.push(new Student('장영실',97,98,97,96));
+	students.push(new Student('강호동',96,98,97,96));
+	students.push(new Student('유재석',95,98,97,96));
+
+	//출력
+	var output = '이름, 총점, 평균<br>';
+	for(var i in students){
+		output += students[i].toString() + '<br>';
+	}
+	document.write(output);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

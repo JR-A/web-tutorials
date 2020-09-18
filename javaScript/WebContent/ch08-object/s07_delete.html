@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성 제거</title>
+<script type="text/javascript">
+	//객체 생성
+	var student = {};
+	
+	//객체에 속성 추가
+	student.이름 = '박문수';
+	student.나이 = 20;
+	student.취미 = '운동';
+	student.특기 = '악기연주';
+	
+	//toString() 메서드 추가
+	student.toString = function(){
+		var output = '';
+		
+		for(var key in this){
+			//toString() 메서드는 출력하지 않음
+			if(key != 'toString'){
+				output += key + ' : ' + this[key] + '<br>';
+			}
+		}
+		return output;
+	};
+	
+	//출력
+	document.write(student.toString());
+	document.write('---------------------<br>');
+	
+	//속성 제거
+	//delete student.특기;	//방법1
+	delete(student.특기);		//방법2	delete함수가 아니라 연산자. ()는 함수호출의 의미가 아니고 최우선 연산자로 쓰임
+	
+	document.write(student.toString());
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>선택자 - 태그 선택자, 클래스 선택자, id 선택자</title>
+<!-- CDN방식 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//태그 선택자         속성		 속성값
+		$('span').css('border', '3px solid blue');
+		
+		//클래스 선택자 (.)
+		$('.my').css('border', '5px solid red');
+		
+		//id 선택자 (#) - 유일
+		$('#content').css('background', 'green');
+	});
+</script>
+
+</head>
+<body>
+	<p class="my">jQuery 실습</p>
+	<div>
+		<div id="content">id값이 content인 div 태그</div>
+	</div>
+	<span>span1</span>
+	<span class="my">span2</span>
+	
+</body>
+</html>

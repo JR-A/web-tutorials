@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 내부에 HTML 태그 추가</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//div에 추가한 태그가 실행
+		$('div').html('<h1>날씨가 흐린 오전!</h1>');
+		
+		//p에 추가한 태그가 실행되지 않고 텍스트(문자열)로 처리
+		$('p').text('<h1>놀이동산의 곰인형</h1>');
+		
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<p></p>
+</body>
+</html>

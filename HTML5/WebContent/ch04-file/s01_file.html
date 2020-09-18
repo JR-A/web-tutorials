@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>file</title>
+<script type="text/javascript">
+	window.onload=function(){
+		//이벤트 연결
+		//파일을 선택할 때 이벤트 발생
+		document.getElementById('file').onchange=function(){
+			//선택한 파일의 File 객체
+			var file = this.files[0];
+			
+			//파일의 정보 취득
+			alert(file.name + '을 선택했습니다.');
+		};
+		
+		//읽기버튼 클릭시
+		document.getElementById('btnStart').onclick=function(){
+			readProcess();
+		};
+	};
+	
+	function readProcess(){
+		//선택한 파일 객체
+		var file = document.getElementById('file').files[0];
+		
+		if(!file){ 	//if(file == undefined)   undefined는 조건체크하면 false임
+			alert('파일을 선택하세요!');
+			return;
+		}
+		
+		//정보 읽기
+		document.getElementById('filename').textContent = file.name;
+		document.getElementById('filesize').textContent = '('+file.size+'bytes)';
+		document.getElementById('filetype').textContent = file.type;
+		document.getElementById('filedate').textContent = file.lastModifiedDate.toLocaleString();	//파일이 가장 마지막으로 변경된 날짜와 시간
+		
+		//파일 읽기 기능
+		var reader = new FileReader();
+		
+		var encodeList = document.getElementById('encoding');	//select태그 객체(콤보박스)
+		var encoding = encodeList.options[encodeList.selectedIndex].value; //select태그의 (선택된 인덱스)번째 옵션의 value
+		
+		//선택한 파일을 읽어 문자열로 저장
+		reader.readAsText(file, encoding);
+		
+		//파일의 내용 읽기 완료되면 textarea에 표시
+		reader.onload = function(){
+			var display = document.getElementById('contents');
+			display.textContent = reader.result; //읽어들인 내용 출력
+		};
+	}
+	
+</script>
+</head>
+<body>
+	<h2>현재 시스템의 파일 읽기</h2>
+	<input type="file" id="file" accept="text/*">	<!-- text파일이면 모두 허용 -->
+	<select id="encoding">
+		<option>EUC-KR</option>
+		<option>UTF-8</option>	
+	</select>
+	<button id="btnStart">읽기</button>
+	<br>
+	<div>
+		<span id="filename">파일명</span>
+		<span id="filesize">파일크기</span>
+		<span id="filetype">파일타입</span>
+		<span id="filedate">파일의 마지막 갱신 일시</span>
+	</div>
+	<textarea rows="10" cols="50" id="contents"></textarea>
+</body>
+</html>

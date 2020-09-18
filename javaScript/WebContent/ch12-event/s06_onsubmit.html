@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onsubmit</title>
+<script type="text/javascript">
+	function check(){
+		var id = document.getElementById('id');
+		if(id.value == ''){
+			alert('아이디를 입력하세요.');
+			id.focus();	//아이디에 커서
+			return false;	//데이터가 전송되지 않도록 처리(submit되지 않도록)
+		}
+		var password = document.getElementById('password');
+		if(password.value == ''){
+			alert('비밀번호를 입력하세요.');
+			password.focus();
+			return false;
+		}
+		
+	}
+</script>
+</head>
+<body> <!-- action : 데이터를 보낼 전송처. 예)서버 -->
+		<!-- submit되면 form에서 이벤트(submit진행)발생 -->
+		<!-- onsubmit : form 태그 안에서 form전송을 하기 전에 입력된 데이터의 유효성을 체크하기 위해 사용하는 이벤트.
+			onsubmit='return false' 이면 do nothing in submit. -->
+	<form id="myForm" action="a.jsp" method="post" onsubmit="return check();">
+		id <input type="text" name="id" id="id"><br>
+		비밀번호 <input type="password" name="password" id="password"><br>
+		<input type="submit" value="확인">
+	</form>
+</body>
+</html>
