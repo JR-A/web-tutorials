@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%> <!-- jsp설정 -->
 <%@ page import="java.util.Date" %>		<!-- [지시자 Directives @] 웹컨테이너가 jsp 페이지를 처리할 때 필요한 정보를 기술 -->
 <%@ page import="java.text.SimpleDateFormat" %>
-<%	//[스크립트릿 Scriptlet Elements] java 영역. 프로그래밍 코드 기술
+<%											//[스크립트릿 Scriptlet Elements] java 영역. 프로그래밍 코드 기술
 	Date nowTime = new Date();
 %>
 <!DOCTYPE html>
