@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery응 이용한 비동기통신 구현4</title>
+<!-- CDN 방식 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//JSON(Javascript Object Notation) : 자바스크립트의 객체 표기법. 값-속성 쌍의 텍스트
+	$(document).ready(function(){
+		//$.getJSON( 요청URL, 데이터를 서버로부터 성공적으로 받았을때 호출되는 함수(param:전송받은 데이터))
+		$.getJSON('myJSONAction.jsp', function(param){
+			$(param).each(function(index, item){ //javascript의 객체(item) 배열 처리
+				var output = '';
+				output += '<div>';
+				output += '		<h1>' + item.name + '</h1>'; //객체의 key로 접근 (각 item의 .key)
+				output += '		<p>' + item.job + '</p>';
+				output += '		<p>' + item.age + '</p>';
+				output += '</div>';
+				
+				//태그를 생성하고 생성된 태그를 상위 태그에 연결
+				$('#output').append(output);
+				
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

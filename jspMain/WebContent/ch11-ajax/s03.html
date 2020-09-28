@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery응 이용한 비동기통신 구현3</title>
+<!-- CDN 방식 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//XML 데이터 읽기
+		$.ajax({
+			url : 'myXMLAction.jsp', //요청URL
+			success: function(param){
+				//find('person') : 하위 태그에서 찾기. 전체 xml데이터로부터 person태그 검색해 배열로반환(여러개이므로)
+				//this : 이벤트 발생한 태그 (person)
+				$(param).find('person').each(function(){ //XML처리 (DOM tree형태 - 상위>하위 태그 찾아가기)
+					var name = '<li>' + $(this).find('name').text() + '</li>';
+					var job = '<li>' + $(this).find('job').text() + '</li>';
+					var age = '<li>' + $(this).find('age').text() + '</li>';
+					
+					$('body').append('<ul>' + name + job + age + '</ul>');
+				});	
+			}
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
