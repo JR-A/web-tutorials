@@ -1,0 +1,13 @@
+/*회원관리*/
+CREATE TABLE smember(
+	num NUMBER NOT NULL,
+	id VARCHAR2(12) UNIQUE NOT NULL,
+	name VARCHAR2(30) NOT NULL,
+	passwd VARCHAR2(12) NOT NULL,
+	email VARCHAR2(50) NOT NULL,
+	phone VARCHAR2(15),
+	reg_date DATE NOT NULL,
+	CONSTRAINT smember_pk PRIMARY KEY (num)
+);
+
+CREATE SEQUENCE member_seq;
