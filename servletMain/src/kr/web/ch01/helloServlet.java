@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 //서블릿은 HttpServlet을 상속해야 사용 가능
 public class HelloServlet extends HttpServlet{
-	//클라이언트(웹브라우저)가 요청하면 HelloServlet 객체사 생성되고 doGet 메서드 호출됨
+	//클라이언트(웹브라우저)가 요청하면 HelloServlet 객체가 생성되고 doGet 메서드 호출됨
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 		//문서 타입 및 캐릭터셋 지정

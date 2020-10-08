@@ -43,9 +43,7 @@
 						}else{		<%--id가 idDuplicated도 아니고, idNotFound도 아닌 경우--%>
 							count = 0;
 							alert('오류 발생!');
-							
 						}
-						
 					}else{			<%--result가 success가 아닌 경우--%>
 						count = 0;
 						alert('오류 발생!!');
