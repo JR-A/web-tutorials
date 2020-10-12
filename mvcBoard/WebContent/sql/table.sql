@@ -1,0 +1,14 @@
+CREATE TABLE sboard(
+	num NUMBER NOT NULL,
+	title VARCHAR2(150) NOT NULL,
+	name VARCHAR2(30) NOT NULL,
+	passwd VARCHAR2(12) NOT NULL,
+	email VARCHAR2(50) NOT NULL,
+	content CLOB NOT NULL, /*4GB까지 저장가능*/
+	ip VARCHAR2(30) NOT NULL,
+	reg_date DATE NOT NULL,
+	
+	CONSTRAINT sboard_pk PRIMARY KEY (num) 
+);
+
+CREATE SEQUENCE board_seq;
